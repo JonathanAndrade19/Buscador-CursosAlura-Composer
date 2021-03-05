@@ -1,0 +1,12 @@
+{
+    "name": "jonathan/buscadorsos",
+    "description": "Projeto que busca os cursos no site da Alura",
+    "type": "library",
+    "authors": [
+        {
+            "name": "JonathanAndrade19",
+            "email": "jonathanjampamb@gmail.com"
+        }
+    ],
+    "require": {}
+}
