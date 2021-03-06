@@ -1,21 +1,18 @@
 <?php
 
 require 'vendor/autoload.php';
-
+require 'src/Buscador.php';
 // Fazer uma busca via GET com Guzzler e imprimir na tela com Crawler via composer 
 use guzzlehttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
+use Alura\BuscadorDeCursos\Buscador;
 
-$client = new GuzzleHttp\Client();
-$resultado = $client->request('GET', 'https://www.alura.com.br/cursos-online-programacao/php');
-
-$html = $resultado->getBody();
-
+$client = new GuzzleHttp\Client(['base_uri' => 'https://www.alura.com.br/']);
 $crawler = new Crawler();
-$crawler->addHtmlContent($html);
 
-$cursos = $crawler->filter('span.card-curso__nome');
+$buscardor = new Buscador($client, $crawler);
+$cursos = $buscardor->buscar('/cursos-online-programacao/php');
 
 foreach ($cursos as $curso) {
-    echo $curso->textContent . '<br>';
+    echo $curso . '<br>';
 }
