@@ -1,7 +1,12 @@
 <?php
 
 require 'vendor/autoload.php';
-require 'src/Buscador.php';
+
+// Teste::metodo();
+// exit();
+// TestandoClassMap::classMap();
+// exit();
+
 // Fazer uma busca via GET com Guzzler e imprimir na tela com Crawler via composer 
 use guzzlehttp\Client;
 use Symfony\Component\DomCrawler\Crawler;
@@ -14,5 +19,5 @@ $buscardor = new Buscador($client, $crawler);
 $cursos = $buscardor->buscar('/cursos-online-programacao/php');
 
 foreach ($cursos as $curso) {
-    echo $curso . '<br>';
+    echo exibirMensagem($curso) ;
 }
