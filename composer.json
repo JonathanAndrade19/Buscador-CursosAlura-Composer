@@ -33,6 +33,19 @@
     "scripts": {
         "test": "phpunit tests\\TestBuscadorDeCursos.php",
         "cs": "phpcs --standard=PSR12 src/",
-        "phan": "phan --allow-polyfill-parser"
+        "phan": "phan --allow-polyfill-parser",
+        "check": [
+            "@phan",
+            "@cs",
+            "@test"
+        ]
+    },
+    "scripts-descriptions": {
+        "test": "Roda o Teste com PHPUNIT",
+        "cs": "Roda uma Verificação da PSR12",
+        "phan": "Roda uma Validação das Configurações do código",
+        "check": "Roda as verificações do códico. PHAN, PHPCS e PHPUNIT"
+        
     }
+     
 }
