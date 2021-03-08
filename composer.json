@@ -1,5 +1,5 @@
 {
-    "name": "jonathan19/buscadorCursos",
+    "name": "jonathan19/buscador-cursos",
     "description": "Projeto que busca os cursos no site da Alura",
     "type": "library",
     "authors": [
@@ -40,7 +40,7 @@
             "@test"
         ],
         "post-update-cmd": [
-            "@cs"
+            "@check"
         ]
     },
     "scripts-descriptions": {
