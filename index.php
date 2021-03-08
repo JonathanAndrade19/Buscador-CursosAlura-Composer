@@ -1,3 +1,4 @@
+#! /usr/bin/env php
 <?php
 
 require 'vendor/autoload.php';
@@ -16,8 +17,8 @@ $client = new GuzzleHttp\Client(['base_uri' => 'https://www.alura.com.br/']);
 $crawler = new Crawler();
 
 $buscardor = new Buscador($client, $crawler);
-$cursos = $buscardor->buscar('/cursos-online-programacao/php');
+$cursos = $buscardor->buscar('/cursos-online-programacao');
 
 foreach ($cursos as $curso) {
-    echo exibirMensagem($curso) ;
+   exibirMensagem($curso) ;
 }

@@ -49,6 +49,8 @@
         "phan": "Roda uma Validação das Configurações do código",
         "check": "Roda as verificações do códico. PHAN, PHPCS e PHPUNIT"
         
-    }
+    },
+    "license": "GPL-3.0",
+    "bin": ["index.php"]
      
 }
